@@ -1,0 +1,91 @@
+<!-- Code Reference: https://www.w3schools.com/howto/howto_css_checkout_form.asp -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>💐Pretty Nice Flowers💐</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <nav>
+        <img class="nav-img" src="Pretty Nice Flowers.png" alt="Pretty Nice Flowers Logo" width="50" height="50">
+        <a href="#">PRETTY NICE FLOWERS</a> 
+    </nav>
+   
+    <!-- https://stackoverflow.com/questions/21106661/link-to-redirect-previous-page -->
+    <a href="#" onclick="javascript:window.history.back(-1);return false;" class="billing_link"><i class="fa fa-arrow-circle-left"></i> Back to billing information</a>
+
+    <h2>Shipping Information</h2>
+    <div class="row">
+        <div class="col-75">
+            <div class="container">
+                <form >
+                    <div class="row">
+                        <div class="col-50">
+                            <h3>Billing Address</h3>
+                            <div class="row">
+                                <div class="col-50">
+                                    <label for="fname">First Name</label>
+                                    <input type="text" id="fname" name="firstname" placeholder="John" required>
+                                </div>
+                                <div class="col-50">
+                                    <label for="fname">Last Name</label>
+                                    <input type="text" id="lname" name="lastname" placeholder="Doe" required>
+                                </div>
+                            </div>
+                            <label for="email">Email</label>
+                            <input type="text" id="email" name="email" placeholder="john@example.com" required>
+                            <label for="adr"><i class="fa fa-address-card-o"></i>Address</label>
+                            <input type="text" id="adr" name="address" placeholder="542 W. 15th Street" required>
+                            <label for="city">City</label>
+                            <input type="text" id="city" name="city" placeholder="Vancouver" required>
+
+                            <div class="row">
+                                <div class="col-50">
+                                    <label for="province">Province</label>
+                                    <input type="text" id="province" name="province" placeholder="BC" required>
+                                </div>
+                                <div class="col-50">
+                                    <label for="postcode">Postal Code</label>
+                                    <input type="text" id="postcode" name="postcode" placeholder="K1A 0A1" required>
+                                </div>
+                            </div>
+                            
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" class="phone" placeholder="123-456-6789" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
+                            
+                        </div>
+
+                        <div class="col-50">
+                            <img src="Pretty Nice Flowers.png" alt="Pretty Nice Flowers Logo" width="400" height="400">
+                            <h3>Note</h3>
+                            <label for="message"><i class="far fa-comment-alt"></i> Message</label>
+                            <textarea rows="4" cols="50" name="comment" form="usrform">Enter message here...</textarea>
+                        </div>
+                    </div>
+                        <label class="shipping-address">
+                            <input type="checkbox" checked="checked" name="sameadr" class="checkbox"> Shipping address same as billing
+                        </label>
+                    <input type="submit" value="Continue to checkout" class="btn">
+                </form>
+            </div>
+        </div>
+        <div class="col-25">
+            <div class="container">
+            <h4>Cart <span class="price" style="color:black"><i class="fa fa-shopping-cart"></i> <b>4</b></span></h4>
+            <p><a href="#">Product 1</a> <span class="price">$15</span></p>
+            <p><a href="#">Product 2</a> <span class="price">$5</span></p>
+            <p><a href="#">Product 3</a> <span class="price">$8</span></p>
+            <p><a href="#">Product 4</a> <span class="price">$2</span></p>
+            <hr>
+            <p>Total <span class="price" style="color:black"><b>$30</b></span></p>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
